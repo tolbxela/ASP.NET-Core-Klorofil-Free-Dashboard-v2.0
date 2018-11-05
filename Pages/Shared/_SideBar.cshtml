@@ -1,0 +1,72 @@
+﻿@{
+    var Active = "active";
+
+    var DashboardActive = "";
+    var ElementsActive = "";
+    var ChartsActive = "";
+    var PanelsActive = "";
+    var NotificationsActive = "";
+    var PagesActive = "";
+    var TablesActive = "";
+    var TypographyActive = "";
+    var IconsActive = "";
+
+
+    switch (ViewData["Title"])
+    {
+
+        case "Dashboard":
+            DashboardActive = Active;
+            break;
+        case "Elements":
+            ElementsActive = Active;
+            break;
+        case "Charts":
+            ChartsActive = Active;
+            break;
+        case "Panels":
+            PanelsActive = Active;
+            break;
+        case "Notifications":
+            NotificationsActive = Active;
+            break;
+        case "Profile":
+            PagesActive = Active;
+            break;
+        case "Tables":
+            TablesActive = Active;
+            break;
+        case "Typography":
+            TypographyActive = Active;
+            break;
+        case "Icons":
+            IconsActive = Active;
+            break;
+    }
+}
+<div id="sidebar-nav" class="sidebar">
+    <div class="sidebar-scroll">
+        <nav>
+            <ul class="nav">
+                <li><a href="index" class="@DashboardActive"><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+                <li><a href="elements" class="@ElementsActive"><i class="lnr lnr-code"></i> <span>Elements</span></a></li>
+                <li><a href="charts" class="@ChartsActive"><i class="lnr lnr-chart-bars"></i> <span>Charts</span></a></li>
+                <li><a href="panels" class="@PanelsActive"><i class="lnr lnr-cog"></i> <span>Panels</span></a></li>
+                <li><a href="notifications" class="@NotificationsActive"><i class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
+                <li>
+                    <a href="#subPages" data-toggle="collapse" class="collapsed @PagesActive"><i class="lnr lnr-file-empty"></i> <span>Pages</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+                    <div id="subPages" class="collapse ">
+                        <ul class="nav">
+                            <li><a href="page-profile" class="">Profile</a></li>
+                            <li><a href="page-login" class="">Login</a></li>
+                            <li><a href="page-lockscreen" class="">Lockscreen</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="tables" class="@TablesActive"><i class="lnr lnr-dice"></i> <span>Tables</span></a></li>
+                <li><a href="typography" class="@TypographyActive"><i class="lnr lnr-text-format"></i> <span>Typography</span></a></li>
+                <li><a href="icons" class="@IconsActive"><i class="lnr lnr-linearicons"></i> <span>Icons</span></a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
